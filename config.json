@@ -1,0 +1,5 @@
+{
+    "prefix_probability": 0.8,
+    "suffix_adjectiv_probability": 0.5,
+    "suffix_name_probability": 0.5
+}

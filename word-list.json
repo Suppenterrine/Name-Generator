@@ -1,41 +1,42 @@
 {
-    "prefix list": [
-      "glückliches",
-      "lustiges",
-      "schnelles",
-      "schönes",
-      "großes",
-      "kleines",
-      "dunkles",
-      "helles",
-      "starkes",
-      "schwaches"
+    "prefix": [
+        "Lost",
+        "Delightful",
+        "Harming",
+        "Chosen",
+        "Blue",
+        "Delightful",
+        "Lost",
+        "Blue"
     ],
-    "name list": [
-      "Apfel",
-      "Banane",
-      "Birne",
-      "Erdbeere",
-      "Himbeere",
-      "Kirsche",
-      "Mango",
-      "Melone",
-      "Orange",
-      "Pfirsich",
-      "Traube",
-      "Zitrone"
+    "name": [
+        "City",
+        "System",
+        "Hole",
+        "Mountain",
+        "Temple",
+        "Mountain",
+        "City",
+        "System",
+        "Hole",
+        "Temple"
     ],
-    "suffix list": [
-      "mann",
-      "frau",
-      "kind",
-      "hund",
-      "katze",
-      "vogel",
-      "fisch",
-      "baer",
-      "tiger",
-      "affe"
+    "suffix_adjective": [
+        "Purple",
+        "Shining",
+        "Divine",
+        "Destructive",
+        "Wonderful",
+        "Destructive"
+    ],
+    "suffix_name": [
+        "Glory",
+        "Doom",
+        "Light",
+        "Rainbows",
+        "Ape",
+        "Rainbows",
+        "Ape",
+        "Doom"
     ]
-  }
-  
+}
