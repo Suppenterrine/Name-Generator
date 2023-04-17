@@ -1,6 +1,7 @@
 # Zufälliger Namensgenerator
 
 Dieses Programm generiert zufällige Namen aus einer Liste von Wörtern in einer JSON-Datei und einer Konfigurationsdatei.
+![example](media/example.gif)
 
 ## Verwendung
 1. Sicherstellen das [Git](https://git-scm.com/downloads) (zum herunterladen des Projektes) und [Node.js](https://nodejs.org/en/download) (zur Ausführung des Projektes) installiert sind.
