@@ -1,6 +1,6 @@
 # Zufälliger Namensgenerator
 
-Dieses Programm generiert zufällige Namen aus einer Liste von Wörtern in einer JSON-Datei und einer Konfigurationsdatei.
+Dieses Programm generiert zufällige Namen aus einer Liste von Wörtern in einer JSON-Datei und einer Konfigurationsdatei.<br>
 ![example](media/example.gif)
 
 ## Verwendung
