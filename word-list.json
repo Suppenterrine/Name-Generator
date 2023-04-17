@@ -1,0 +1,41 @@
+{
+    "prefix list": [
+      "glückliches",
+      "lustiges",
+      "schnelles",
+      "schönes",
+      "großes",
+      "kleines",
+      "dunkles",
+      "helles",
+      "starkes",
+      "schwaches"
+    ],
+    "name list": [
+      "Apfel",
+      "Banane",
+      "Birne",
+      "Erdbeere",
+      "Himbeere",
+      "Kirsche",
+      "Mango",
+      "Melone",
+      "Orange",
+      "Pfirsich",
+      "Traube",
+      "Zitrone"
+    ],
+    "suffix list": [
+      "mann",
+      "frau",
+      "kind",
+      "hund",
+      "katze",
+      "vogel",
+      "fisch",
+      "baer",
+      "tiger",
+      "affe"
+    ]
+  }
+  
