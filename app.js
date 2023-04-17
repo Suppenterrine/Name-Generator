@@ -2,6 +2,7 @@ const fs = require('fs');
 const { promisify } = require('util');
 const readFileAsync = promisify(fs.readFile);
 
+
 // random index generator based on list length
 function getRandomIndex(list) {
     return Math.floor(Math.random() * list.length);
@@ -43,6 +44,8 @@ function generateRandomName(wordList, config, seperator, fillword, second_fillwo
 
     return result;
 }
+
+// main function
 async function main() {
     // reading config file
     const config = await readFileAsync('config.json');
@@ -54,8 +57,11 @@ async function main() {
     // read word list data
     const data = await readFileAsync('word-list.json');
     const wordList = JSON.parse(data);
+
+    // generate random name
     const name = generateRandomName(wordList, configData, seperator, fillword, second_fillword);
 
+    // print name
     console.log(name);
 }
 
