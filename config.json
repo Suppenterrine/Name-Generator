@@ -1,5 +1,11 @@
 {
     "prefix_probability": 0.8,
     "suffix_adjectiv_probability": 0.5,
-    "suffix_name_probability": 0.5
+    "suffix_name_probability": 0.5,
+    "seperator": " ",
+    "fillword": "of",
+    "second_fillword": null,
+    "description": {
+        "second_fillword": "Möglich Werte: <beliebiges wort> oder <null> um nichts zu verwenden"
+    }
 }
