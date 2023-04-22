@@ -105,6 +105,12 @@ function getQuestions(askForFilesOnly) {
       name: 'fillword',
       message: 'Füllwort, das zwischen Name und Suffix hinzugefügt wird (z.B. "of"):',
       default: 'of'
+    },
+    {
+      type: 'confirm',
+      name: 'save_results_to_file',
+      message: 'Sollen die Ausgaben gespeichert werden (z.B. "results.txt")?:',
+      default: false
     }
   ];
 
@@ -206,7 +212,7 @@ function generateRandomName(wordList, config, seperator, fillword, lastUsedName)
 
   // add "The" before prefix with xx% probability
   if (Math.random() < prefixArticleProbality) {
-    prefix = `The ${prefix}`;
+    prefix = `The${seperator}${prefix}`;
   }
 
   const name = nameList[getRandomIndex(nameList)];
@@ -234,7 +240,7 @@ function generateRandomName(wordList, config, seperator, fillword, lastUsedName)
 
     // add "the" after "of" with xx% probability
     if (result.includes("of") && Math.random() < suffixArticleProbability) {
-      result = result.replace("of", "of the");
+      result = result.replace("of", `of${seperator}the`);
     }
   } while (result === lastUsedName);
 
@@ -254,10 +260,30 @@ async function generateName(configFilePath, configData) {
   await writeFileAsync(configFilePath, JSON.stringify(configData, null, 2));
 
   console.log(name);
+  return name;
+}
+
+async function saveResultsToFile(outputFilePath, text) {
+  try {
+  
+    // check if output directory and file exists, else create them
+    if (!fs.existsSync('output')) {
+      fs.mkdirSync('output');
+    }
+    if (!fs.existsSync(outputFilePath)) {
+      fs.writeFileSync(outputFilePath, '');
+    }
+
+    fs.appendFileSync(outputFilePath, text + '\n');
+  } catch (error) {
+    console.error(chalk.bgRed.white('Fehler beim Schreiben der Ausgabedatei:\n') + error.message);
+    process.exit(1);
+  }
 }
 
 async function main() {
   const configFilePath = 'config.json';
+  const outputFilePath = 'output/output.txt';
 
   let configData;
   if (fs.existsSync(configFilePath)) {
@@ -298,7 +324,11 @@ node app.js --help
     console.log('Config file updated successfully.\n');
 
     console.log('\n(ﾉ☉ヮ⚆)ﾉ ⌒*:･ﾟ✧ ✨');
-    await generateName(configFilePath, configData);
+    let output = await generateName(configFilePath, configData);
+
+    if (configData['save_results_to_file']) {
+      await saveResultsToFile(outputFilePath, output);
+    }
   }
 
   else if (args.includes('-c') || args.includes('--config')) {
@@ -312,12 +342,20 @@ node app.js --help
     console.log('Config file updated successfully.\n');
 
     console.log('\n(ﾉ☉ヮ⚆)ﾉ ⌒*:･ﾟ✧ ✨');
-    await generateName(configFilePath, configData);
+    let output = await generateName(configFilePath, configData);
+
+    if (configData['save_results_to_file']) {
+      await saveResultsToFile(outputFilePath, output);
+    }
   }
 
   else {
     console.log('\n(ﾉ☉ヮ⚆)ﾉ ⌒*:･ﾟ✧ ✨');
-    await generateName(configFilePath, configData);
+    let output = await generateName(configFilePath, configData);
+
+    if (configData['save_results_to_file']) {
+      await saveResultsToFile(outputFilePath, output);
+    }
   }
 }
 
