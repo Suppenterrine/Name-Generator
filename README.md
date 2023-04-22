@@ -3,7 +3,8 @@
 
 > Dieses Programm generiert zufällige Namen (oder Sequenzen) aus Wörtern aus angegebenen CSV-Dateien und einer Konfigurationsdatei.<br>
 
-![example](media/example.gif)
+![example](media/example.gif#gh-light-mode-only)
+![example darkmode](media/example_darkmode.gif#gh-dark-mode-only)
 
 
 <details closed>
