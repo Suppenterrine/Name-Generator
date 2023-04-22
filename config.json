@@ -1,11 +1,14 @@
 {
-    "prefix_probability": 0.8,
-    "suffix_adjectiv_probability": 0.5,
-    "suffix_name_probability": 0.5,
-    "seperator": " ",
-    "fillword": "of",
-    "second_fillword": null,
-    "description": {
-        "second_fillword": "Möglich Werte: <beliebiges wort> oder <null> um nichts zu verwenden"
-    }
+  "prefix_article_probality": 0.2,
+  "prefix_probability": 0.8,
+  "suffix_article_probability": 0.3,
+  "suffix_adjectiv_probability": 0.5,
+  "suffix_name_probability": 0.5,
+  "seperator": " ",
+  "fillword": "of",
+  "selectedFiles": [
+    "sample_data_one.csv",
+    "sample_data_two.csv"
+  ],
+  "last_used_name": "The Hearty Unease of Agitated Destruction"
 }
