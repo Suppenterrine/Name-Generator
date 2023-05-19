@@ -142,7 +142,9 @@ async function readCsvData(file) {
         if (!data[key]) {
           data[key] = [];
         }
-        data[key].push(item[key]);
+        if (item[key] !== ''){
+          data[key].push(item[key]);
+        }
       });
     });
 
