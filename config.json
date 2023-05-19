@@ -1,15 +1,14 @@
 {
   "prefix_article_probality": 0.2,
   "prefix_probability": 0.8,
-  "suffix_article_probability": 0.4,
-  "suffix_adjectiv_probability": 0.6,
-  "suffix_name_probability": 0.6,
-  "seperator": "-",
+  "suffix_article_probability": 0.3,
+  "suffix_adjectiv_probability": 0.5,
+  "suffix_name_probability": 0.5,
+  "seperator": " ",
   "fillword": "of",
   "selectedFiles": [
-    "sample_data_one.csv",
-    "sample_data_two.csv"
+    "nms2.csv"
   ],
-  "last_used_name": "Network-of-the-Marvelous-Luminescence",
+  "last_used_name": "Gutless Replica",
   "save_results_to_file": true
 }
